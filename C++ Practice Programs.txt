@@ -1,0 +1,713 @@
+......................................(1)..................................
+TO CHECK GREATER NUMBR
+#include <iostream>
+using namespace std;
+	int main () {
+		float num1,num2;
+		cout<<"Enter First Number :";cin>>num1;
+		cout<<"Enter Second Number :";cin>>num2;
+		if (num1>num2){
+			cout<<"First Number Is Greater Than Second Number";  
+		}
+		else if (num2>num1){
+			cout<<"Second Number Is Greater Than First Number";   
+		cout<<endl;
+		}
+		system ("pause");
+}
+
+
+
+.......................................(2)...................................
+AGE CALCULATOR
+#include <iostream>
+using namespace std;
+	int main () {
+		int age;
+		cout<<"Enter Age :";cin>>age;
+		if (age < 13){
+		cout<<"Child";
+		}
+		else if (age < 20){
+		cout<<"Teenager";
+		}
+		else if (age < 60){
+		cout<<"Adult";
+		}
+		else if (age > 60){cout<<"Senoir Citizen";
+		}
+		cout<<endl;
+		system ("pause");
+}
+
+
+
+.........................................(3)..................................
+CALCULATOR
+#include <iostream>
+using namespace std;
+	int main () {
+		int num1,num2;
+		char opreator;
+		cout<<"Enter First Number :";cin>>num1;
+		cout<<"Enter Second Number :";cin>>num2;
+		cout<<"Choose +,-,/,X :";cin>>opreator;
+		if (opreator == '+') {cout<<num1<<"+"<<num2<<"="<<num1 + num2;
+		}
+		else if (opreator == '-') {cout<<num1<<"-"<<num2<<"="<<num1 - num2;
+		}
+		else if (opreator == '/') {cout<<num1<<"-"<<num2<<"="<<num1 / num2;
+		}
+		else if (opreator == 'X') {cout<<num1<<"X"<<num2<<"="<<num1 * num2;
+		}
+		cout<<endl;
+		system ("pause");
+}
+
+
+.......................................(4).........................................
+#include <iostream>
+using namespace std;
+	int main () {
+		int num;
+		cout<<"Enter Number :";cin>>num;
+
+
+		if (num%2==0){
+			cout<<"Even"; 
+		}
+		else { cout<<"Odd";}
+
+
+		cout<<endl;
+		system ("pause");
+}
+
+.......................................(5).............................................
+
+
+#include <iostream>
+using namespace std;
+	int main () {
+		float num1,num2;
+		char lol;
+		cout<<"Enter Number 1 :";cin>>num1;
+		cout<<"Enter NUmber 2 :";cin>>num2;
+		cout<<"Enter +,-,/,* :";cin>>lol;
+		switch (lol)
+		{
+		case '+':
+				cout<<num1<<"+"<<num2<<"="<<num1 + num2;
+				break;
+		case '-':
+					cout<<num1<<"-"<<num2<<"="<<num1 - num2;
+					break;
+		case '/':
+						cout<<num1<<"-"<<num2<<"="<<num1 / num2;
+						break;
+		case '*':
+							cout<<num1<<"X"<<num2<<"="<<num1 * num2;
+							break;
+		
+		};
+
+		
+		cout<<endl;
+		system ("pause");
+}
+.........................................(6).........................................................
+
+#include <iostream>
+using namespace std;
+	int main () {
+		float bmi,weight,height;
+		cout<<"Enter Your Height in Meters :";cin>>height;
+		cout<<"Enter Weight in Kg :";cin>>weight;
+		bmi= (weight)/(height*height);
+		cout<<"BMI = "<<bmi;
+
+
+	
+		cout<<endl;
+		system ("pause");
+}
+...........................................(7).........................................................
+#include <iostream>
+using namespace std;
+	int main () {
+		char val;
+		float temp,temp1;
+		cout<<"For Celsius to Fahrenheit press F \n For Fahrenheit to Celsius press C/n";
+		cout<<"Input : ";cin>>val;
+		switch (val)
+		{
+		case 'F':
+			{
+			cout<<"Enter Temprature in Fahrenheit : ";cin>>temp;
+			cout<<"Temprature in Celsius : "<<(temp - 32)*5/9;
+			break;
+			}
+		case 'C':
+			{
+			cout<<"Enter Temprature in Celsius : ";cin>>temp;
+			cout<<"Temprature in Fahrenheit : "<<(temp*9/5) + 32 ;
+			break;
+			}
+		}
+	
+		cout<<endl;
+		system ("pause");
+}
+..................................................(8)...................................................
+#include <iostream>
+using namespace std;
+	int main () {
+		int num,val=0,count=3;
+		cout<<"Enter a Positive Integer : ";cin>>num;
+		if (num<=0){cout<<"Invalid Input";
+		}
+		else if (num==1)	{cout<<"Invalid Input";}
+		else if (num==2){cout<<"Prime";}
+		else if (num==3){cout<<"Prime";}
+		else { while (count<num/2){
+			if (num%count==0){
+				val= val + 1;
+			break;}
+			count= count +1;         }
+		if ( val == 0){
+		cout<<"Prime";}
+		else {cout<<"Not Prime";}
+		}
+		cout<<endl;
+		system ("pause");
+}
+.................................................(9).....................................................
+#include <iostream>
+using namespace std;
+	int main () {
+		int num,count=1,factorial=1;
+		cout<<"Enter a Positive Integer : ";cin>>num;
+		while (count<=num){
+		factorial = factorial*count;
+		count = count + 1;
+		}
+		cout<<"Factorial = "<<factorial;
+		cout<<endl;
+		system ("pause");
+}
+..................................................(10)...................................................
+#include <iostream>
+using namespace std;
+	int main () {
+		int num,reverse=0,orignal_num,rem=0;
+		cout<<"Enter a Positive Integer : ";cin>>num;
+		orignal_num=num;
+		while (num>0){
+		rem=num%10;
+		num=num/10;
+		reverse=rem+(reverse*10);
+		}
+		if (reverse==orignal_num){
+		cout<<"Plaindrome";                                                                      .
+		}                                                                                        .
+		else {cout<<"Not Plaindrome";}                                                           .
+		cout<<endl;                                                                              .
+		system ("pause");                                                                        .
+}                                                                                                        .
+..................................................(11)....................................................
+
+#include <iostream>
+using namespace std;
+	int main () {
+		int num,reverse=0,rem=0;
+		cout<<"Enter a Positive Integer : ";cin>>num;
+		while (num>0){
+		rem=num%10;
+		num=num/10;
+		reverse=rem+(reverse*10);
+		}
+		cout<<"Reverse = "<<reverse;
+		cout<<endl;
+		system ("pause");
+}
+..................................................(12)......................................................
+
+#include <iostream>
+using namespace std;
+int main () {
+int x,num,count=0,digit_3,digit_2,digit_1,val=0;
+	cout<<"Enter a 3-digit Number : ";cin>>num; 
+if (num < 100){
+	cout<<"Invalid";}
+else if (num > 999){
+	cout<<"Invalid";}
+else {
+digit_3=( num / 100)%10;
+digit_2=( num / 10)%10;
+	digit_1= num %10;
+while (count<12){
+cout<<"Enter Number : ";cin>>x;
+if (digit_1==x){
+val=val+1;
+}
+if (digit_2==x){
+val=val+1;
+}
+if (digit_3==x){
+val=val+1;
+}
+	count=count+1;
+}
+if (val >= 3){
+cout<<"Number was Found!";}
+else {cout<<"Number was not Found";}
+}
+cout<<endl;
+   system ("pause");
+	return 0;
+}
+
+...................................(13)...............................................
+
+#include <iostream>
+using namespace std;
+int main(){
+	int num,orignal_num, remainder = 0,sum=0;
+	cout << "Enter a Number : "; cin >> num;
+	orignal_num = num;
+	while (num > 0) {
+		remainder = num % 10;
+		sum = sum + remainder * remainder * remainder;
+		num = num / 10;
+	}
+	if (orignal_num == sum) {
+		cout << "Number Is Armstrong";
+	}
+	else {
+		cout << "Number Is Not Armstrong";
+	}
+	cout << endl;
+	system("pause");
+	return 0;
+}
+
+........................................(14)..........................................
+
+#include <iostream>
+using namespace std;
+int main(){
+	int n, dice_value, triple_six = 0 , count = 0;
+	cout << "Enter Number of times Dice rolls : "; cin >> n;
+	while (count < n) {
+		cout << "Enter Dice Value : "; cin >> dice_value;
+		if (dice_value == 6) {
+			triple_six = triple_six + 1;}
+			count = count + 1;
+		
+	}
+	if (triple_six == 3) {
+		cout << "You Won!";
+	}
+	else { cout << "You Lose!";
+	}
+	cout << endl;
+	system("pause");
+	return 0;
+}
+
+..........................................(15).........................................
+
+#include <iostream>
+using namespace std;
+int main () {
+int num,sum=0,count=1;
+cout<<"Enter A Number : ";cin>>num;
+while (count<num){
+	if (num%count==0){
+		sum=count+sum;
+	}
+	count=count+1;
+}
+if (sum==num){
+cout<<"Number Is Perfect";}
+else {cout<<"Number Is Not Perfect";}
+cout<<endl;
+   system ("pause");
+	return 0;
+}
+
+........................................(16)...........................................
+
+#include <iostream>
+using namespace std;
+int main(){
+int num,n,count=1,low = 0;;
+cout<<"Enter No of Inputs : ";cin>>n;
+cout<<"Enter Number : ";cin>>num;
+low=num;
+while (count < n){
+	cout<<"Enter Number : ";cin>>num;
+if (num<low){
+low=num;}
+count=count+1;
+}
+cout<<"LOW = "<<low<<endl;
+system("pause");
+}
+
+............................................(17)........................................
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, n, count = 1, max1 = 0, max2 = 0, max3 = 0;
+    cout << "Enter No of Inputs : ";
+    cin >> n;
+    cout << "Enter Number : ";
+    cin >> num;
+    max1 = num;
+    while (count < n) {
+        cout << "Enter Number : ";
+        cin >> num;
+        if (num > max1) {
+            max3 = max2;
+            max2 = max1;
+            max1 = num;
+        }
+        else if (num > max2) {
+            max3 = max2;
+            max2 = num;
+        }
+        else if (num > max3) {
+            max3 = num;
+        }
+        count = count + 1;
+    }
+    cout << "MAX1: " << max1 << endl;
+    cout << "MAX2: " << max2 << endl;
+    cout << "MAX3: " << max3 << endl;
+    system("pause");
+}
+.....................................(18)......................................
+
+#include <iostream>
+using namespace std;
+int main(){
+int num,sum=0,start=0,end=0,count=0;
+cout<<"Enter Starting Point :";cin>>start;
+cout<<"Enter Ending Point : ";cin>>end;
+count=start;
+while (count<=end){
+sum=sum+count;
+count=count+1;
+}
+cout<<"The Sum is : "<<sum<<endl;
+system("pause");
+}
+
+.....................................(19).......................................
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    const int size = 11;
+    int sum = 0;
+    int myArray[size];
+    srand(time(0));
+    for (int i = 0; i < 11; i++) {
+        int rand_num = rand()%30 + 1;
+        myArray[i] = rand_num;
+        cout << "Index " << i << " = " << myArray[i]<<endl;
+        sum = sum + myArray[i];
+    }
+    cout << "Avg = " << sum / 11<<endl;
+    system("pause");
+}
+.....................................(20).......................................
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    const int size = 11;
+    int sum = 0, even = 0, odd = 0;
+    int myArray[size];
+    srand(time(0));
+    for (int i = 0; i < 11; i++) {
+        int rand_num = rand()%30 + 1;
+        myArray[i] = rand_num;
+        cout << "Index " << i << " = " << myArray[i]<<endl;
+        if (myArray[i] % 2 == 0) {
+            even = even + 1;
+        }
+        else { odd = odd + 1;
+        }
+    }
+    cout <<"Number of Even Terms Generated = "<<even<<endl;
+    cout << "Number of Odd Terms Generated = " << odd << endl;
+    system("pause");
+}
+.....................................(21).......................................
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    const int size = 11;
+    int sumOFeven = 0, sumOFodd = 0, even = 0, odd = 0;
+    int myArray[size];
+    srand(time(0));
+    for (int i = 0; i < 11; i++) {
+        int rand_num = rand()%30 + 1;
+        myArray[i] = rand_num;
+        cout << "Index " << i << " = " << myArray[i]<<endl;
+        if (myArray[i] % 2 == 0) {
+            sumOFeven = sumOFeven + myArray[i];
+        }
+        else {
+            sumOFodd = sumOFodd + myArray[i];
+        }
+    }
+    cout <<"Sum of Even Terms  = "<<sumOFeven <<endl;
+    cout << "Sum of Odd Terms  = " << sumOFodd << endl;
+    system("pause");
+}
+.....................................(22).......................................
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    const int size = 11;
+    int sumOFeven = 0, sumOFodd = 0, even = 0, odd = 0;
+    int myArray[size];
+    srand(time(0));
+    for (int i = 0; i < 11; i++) {
+        int rand_num = rand()%30 + 1;
+        myArray[i] = rand_num;
+        cout << "Index " << i << " = " << myArray[i]<<endl;
+        if (myArray[i] % 2 == 0) {
+            sumOFeven = sumOFeven + myArray[i];
+            even = even + 1;
+        }
+        else {
+            sumOFodd = sumOFodd + myArray[i];
+            odd = odd + 1;
+        }
+    }
+    cout <<"Average of Even Terms  = "<<sumOFeven/even <<endl;
+    cout << "Average of Odd Terms  = " << sumOFodd/odd << endl;
+    system("pause");
+}
+.....................................(23).......................................
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    const int size = 11;
+    int max=0;
+    int myArray[size];
+    srand(time(0));
+    int rand_num1 = rand() % 30 + 1;
+    max = rand_num1;
+    myArray[10] = rand_num1;
+    cout << "Index " << 0 << " = " << myArray[10] << endl;
+    for (int i = 1; i <= 10; i++) {
+        int rand_num = rand() % 30 + 1;
+        myArray[i] = rand_num;
+        cout << "Index " << i << " = " << myArray[i] << endl;
+        if (myArray[i] > max) {
+            max = myArray[i];
+        }
+    }
+    cout << "Max = " << max << endl;
+    
+    system("pause");
+}
+.....................................(24).......................................
+#include <iostream>
+using namespace std;
+int main() {
+    int width,orignal=0,count=0;
+    cout << "Enter Witdh : "; cin >> width;
+    orignal = width;
+    int i = 0;
+    i = width;
+    for (; i >0; i--) {
+        cout << "*";
+        count = count + 1;
+        if (i == 1) {
+            i = orignal - 1;
+            orignal = orignal - 1;
+            cout << endl;
+        }
+       
+     }
+    system("pause");
+}
+.....................................(25).......................................
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main() {
+	char str[100];
+	int flag = 0;
+	cout << "Enter A Sentence : "; cin.getline(str, 100);
+	for (int i = 0; i < 100; i++) {
+		if (str[i] == '\0') {
+			flag = i;
+			break;
+		}	
+	}
+	int len[15];
+	int ind[15];
+	int x = 0, y = 0;
+	int count = 0;
+	for (int i = 0; i < flag; i++) {
+		count++;
+		if (str[i] == ' ' || str[i] == '\0') {
+			len[x] = count - 1;
+			x++;
+			count = 0;
+		}
+		if (count == 1) {
+			ind[y] = i + 1;
+			y++;
+		}		
+	}
+	int flag_a = 0;
+	for (int i = 0; i < 15; i++) {
+		for (int j = i + 1; j < 15; j++) {
+			if (len[j] > len[flag_a]) {
+				flag_a = j;
+			}
+		}
+	}
+	cout << "The Largest Word Starts From : " << ind[flag_a] << endl;
+	return 0;
+}
+.................................(26)......................................
+#include<iostream>
+
+using namespace std;
+int main() {
+    //*******||||||||||||||||||||||||||*******
+ //   ****** |||||||||||||||||||||||||| ******
+ //   *****  ||||||||||||||||||||||||||  *****
+ //   ****   ||||||||||||||||||||||||||   ****
+ //   ***    ||||||||||||||||||||||||||    ***
+ //   **     ||||||||||||||||||||||||||     **
+ //   *      ||||||||||||||||||||||||||      *
+
+	int a = 0;
+	for (int i = 0; i < 7; i++) {
+		for (int j = 0; j < 40; j++) {
+			if (j < 7 || j > 32) {
+				if (j < 7 - a || j > 32 + a) {
+					cout << "*" << " ";
+				}
+				else {
+					cout << "  ";
+				}
+				
+			}
+			else {
+				cout << "|" << " ";
+			}
+		}
+		a++;
+		cout << endl;
+	}
+
+	return 0;
+}
+.................................(27)......................................
+    int a, b;
+    cout << "Enter A : "; cin >> a;
+    cout << "Enter B : "; cin >> b;
+    cout << "Swap : ";
+    int* p0, *p1;
+
+    p0 = &a;
+    p1 = &b;
+    int temp = *p0;
+    *p0 = *p1;
+    *p1 = temp;
+    cout << a << " " << b << endl;
+.................................(28)......................................
+    int a, b;
+    cout << "Enter A : "; cin >> a;
+    cout << "Enter B : "; cin >> b;
+    cout << "A - B : ";
+    int* p0, *p1;
+
+    p0 = &a;
+    p1 = &b;
+    int temp = *p0 - *p1;
+
+    cout << temp << endl;
+.................................(29)......................................
+#include<iostream>
+using namespace std;
+int* InputArray(const int& size) {
+	int* arr = new int[size];
+	for (int i = 0; i < size; i++) {
+		cout << "Enter Element #" << i + 1 << " : "; cin >> *(arr + i);
+	}
+	return arr;
+}
+int* CompressArray(int* orignalArr, int& size) {
+	for(int i = 0; i < size; i++){
+		for (int j = i + 1; j < size; j++) {
+			if (*(orignalArr + i) == *(orignalArr + j)) {
+				*(orignalArr + j) = 0;
+		    }
+		}
+	}
+	int count = 0;
+	for (int i = 0; i < size; i++) {
+		if (*(orignalArr + i) > 0) {
+			count = count + 1;
+		}
+	}
+	int* newarr = new int[count];
+	int temp = 0;
+	for (int i = 0; i < size; i++) {
+		if (*(orignalArr + i) > 0) {
+			*(newarr + temp) = *(orignalArr + i);
+			temp = temp + 1;
+		}
+	}
+	size = count;
+	return newarr;
+}
+void OutputArray(int* const ptr, const int& size) {
+	for (int i = 0; i < size; i++) {
+		cout << *(ptr + i) << " ";
+	}
+	cout << endl;
+}
+int main() {
+	int size = 0;
+	cout << "Enter The Size of Array :  "; cin >> size;
+	int* ptr =  InputArray(size);
+	int* ptr_1 = CompressArray(ptr, size);
+	cout << "Output : ";
+	OutputArray(ptr_1, size);
+	system("pause");
+	return 0;
+}
+
+.................................(31)......................................
+.................................(32)......................................
+.................................(33)......................................
+.................................(34)......................................
+.................................(35)......................................
